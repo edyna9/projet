@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <title>Projet PWA</title>
@@ -40,20 +40,22 @@
 
 </head>
 
-<body>
-    <header>
-        <div id="lien"></div>
-        <button id="button_mode">Dark Mode</button>
-        <h1>PROJET</h1>
-    </header>
-    <main>
-        <h1>Requêtes AJAX sur news API</h1>
-        <div>
-            <div id="news"></div>
-        </div>
+<body id="body" class="dark-mode">
+    <div id="the_div">
+        <header>
+            <button id="button_mode" type="button" name="dark_light" onclick="toggleDarkLight()"
+                title="Toggle dark/light mode">Change mode</button>
 
-    </main>
+            <a href="test2.html"> More information</a>
+            <h1>Requêtes AJAX sur news API</h1>
+        </header>
+        <main>
+            <div>
+                <div id="news"></div>
+            </div>
 
+        </main>
+    </div>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 //REQUETE GET EN AJAX
 $(document).ready(function () {
     $.ajax({
-        url:"https://newsapi.org/v2/top-headlines?country=us&apiKey=07002241e6114b4ebcc207a9227b0893",
+        url:"https://newsapi.org/v2/top-headlines?country=us&apiKey=a0892e0f166e4f88a441245b5b1655bb",
         type: "get",
         dataType: "json",
         success: function (data) {
@@ -23,22 +23,6 @@ $(document).ready(function () {
     });
 });
 
-/* second link
-$(document).click(function () {
-    $.ajax({
-        url:"http://newsapi.org/v2/everything?domains=wsj.com&apiKey=07002241e6114b4ebcc207a9227b0893",
-        type: "get",
-        dataType: "html",
-        success: function (code_html, statut) 
-                $("#lien").append("<a href="+ url+">"+"<button>More information</button></a>");
-            }
-        },
-        error: function(result, error){
-            alert("ERROR");
-        }
-    });
-});
-*/
 
 //Service Worker
 if ("serviceWorker" in navigator) {
@@ -50,3 +34,10 @@ if ("serviceWorker" in navigator) {
     });
 }
 
+
+//DARK MODE
+function toggleDarkLight() {
+    var body = document.getElementById("body");
+    var currentClass = body.className;
+    body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+  }

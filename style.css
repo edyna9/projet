@@ -1,31 +1,57 @@
 /*COTAINER ELEMENTS*/
 body{
     background-color: rgb(207, 206, 206);
+    margin: 0;
 }
+#the_div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 main >div{
     display: flex;
     justify-content: center;
 }
+main{
+    margin-top: 100px;
+}
 /*HEADER*/
+header{
+        background-color: rgb(173, 173, 216);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        
+}
+
 #button_mode{
-    background-color: rgb(78, 74, 74);
+    background-color:  rgb(173, 173, 216);
     color: white;
     font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border: none;
+    border-left: solid white 1px;
+
 }
 /*TITLES & TEXT*/
 h1{
     text-align: center;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     text-shadow: rgb(100, 100, 100) 1px 0 10px;
+    font-size: 20px;
+    margin-left: 15px;
 }
-h2{
+h2, p, a{
     font-family: 'Montserrat', sans-serif;
-    color: gray;
 }
-p{
-    font-family: 'Montserrat', sans-serif;
-    color: gray;
-}
+
 /*IMAGES*/
 img {
     width: 250px;
@@ -37,10 +63,12 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
+    justify-content: center;
+    margin:0;
     }
 #news >div{
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     justify-content: space-between;
 }
 .item {
@@ -49,10 +77,9 @@ img {
     justify-content: flex-start;
     box-shadow: 0 0 5px rgb(102, 101, 101);
     border-radius: 10px;
-    background: rgb(238, 237, 237);
     font-weight: bold; 
     max-width: 250px;
-    padding: 15px;
+    padding: 10px;
     margin:10px;
 }
 div >a{
@@ -62,7 +89,7 @@ a >button{
     background-color: rgb(139, 161, 202);
     color: white;
     font-family: 'Montserrat', sans-serif;
-    padding: 15px;
+    padding: 10px;
     border: none;
 }
 /*GRIDS*/
@@ -71,40 +98,53 @@ a >button{
     #news{
         grid-template-columns: repeat(2,300px)
         }
+    h1{
+        font-size: 25px;
+        }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1399px){
     #news{
         grid-template-columns: repeat(3,300px)
         }
+    h1{
+        font-size: 30px;
+        }
 }
 @media screen and (min-width: 1400px) {
     #news{
         grid-template-columns: repeat(4,300px)
         }
-}
-/*MODE
-@media (prefers-colors-scheme: light){
-    body{
-        background-color: rgb(241, 241, 241) ;
-        color: rgb(32, 31, 31);
-    }
-}
-
-@media (prefers-colors-scheme: dark){
-    body{
-        background-color: rgb(48, 46, 46) ;
-        color: rgb(253, 250, 250);
-    }
-}
-
-#navbar a {
-    float: left;
-    padding: 12px;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
+        h1{
+            font-size: 30px;
+            }
 }
 
 
-*/
+
+
+
+/*DARK MODE*/
+
+body.dark-mode {
+    background-color: rgb(54, 53, 53);
+    color: #eee;
+  }
+body.dark-mode .item{
+    background-color: rgb(105, 102, 102);
+  }
+  body.dark-mode h2, p{
+    color: white;
+  }
+
+  /*LIGHT MODE*/
+body.light-mode {
+    background-color: #eee;
+    color: #111;
+  }
+  body.dark-mode .item{
+    background-color: rgb(233, 230, 230);
+  }
+  body.dark-mode h2, p{
+    color: #111;
+  }
